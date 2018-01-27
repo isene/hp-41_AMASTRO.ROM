@@ -2,7 +2,6 @@
 
 The amature astronomy rom for the HP-41 calculator - telescope and observational utilities.
 
-
 ## OBSRV
 
 This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars, barlows and filters). You add observation objects/targets (Solar system object, Star, Double Star, Tripple Star, Variable star, Open cluster, Globular, Nebulae, Galaxy). You create your observation agenda/list for the night and then enter your notes for each object you observe. You can create templates as observation list.
@@ -71,3 +70,7 @@ From the Paname module - stops program execution, waits for the user to press ei
 ### ARCLXI
 
 From the CCD OS/X where it is called ARCLI. It appends to Alpha the integer value of the number in X.
+
+## Credits
+
+This ROM is created using Håkan Tørngren's brilliant NutStudio software. Thanks also goes to Ángel Martin for his help with extracting the YN? routine from the Paname module.
