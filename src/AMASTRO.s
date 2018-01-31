@@ -1,34 +1,34 @@
                 .SECTION FAT
 
-`FAT entry: YN?`:
-                .FAT  YN
+`FAT entry: YNTEST`:
+                .FAT  YNTEST
               
-`FAT entry: ANUMDEL`:
-                .FAT  ANUMDEL
+`FAT entry: ANUMREM`:
+                .FAT  ANUMREM
               
-`FAT entry: ADELR`:
-                .FAT  ADELR
+`FAT entry: ABACK`:
+                .FAT  ABACK
               
-`FAT entry: MENU`:
-                .FAT  MENU
+`FAT entry: KEYMENU`:
+                .FAT  KEYMENU
               
-`FAT entry: APROMPT`:
-                .FAT  APROMPT
+`FAT entry: APRMT`:
+                .FAT  APRMT
               
-`FAT entry: ARCLXI`:
-                .FAT  ARCLXI
+`FAT entry: ARCLINT`:
+                .FAT  ARCLINT
               
-`FAT entry: CLASPC`:
-                .FAT  CLASPC
+`FAT entry: CLASP`:
+                .FAT  CLASP
               
-                .PUBLIC `FAT entry: YN?`, `FAT entry: ANUMDEL`, `FAT entry: ADELR`, `FAT entry: MENU`, `FAT entry: APROMPT`, `FAT entry: ARCLXI`, `FAT entry: CLASPC`
+                .PUBLIC `FAT entry: YNTEST`, `FAT entry: ANUMREM`, `FAT entry: ABACK`, `FAT entry: KEYMENU`, `FAT entry: APRMT`, `FAT entry: ARCLINT`, `FAT entry: CLASP`
               
                 .SECTION Code
 
 
-;;; Copied from the Paname rom (with the help of Ángel Martin)
-           .NAME "YN?"
-YN:        .con 0x130  ;  LDI S&X=09
+;;; Copied from the Paname rom (with the help of Ángel Martin), where the function is called Y/N?
+           .NAME "YNTEST"
+YNTEST:    .con 0x130  ;  LDI S&X=09
            .con 0x059  ;  CON:  short high pitch
            .con 0x375  ;  ?NC XQ      =09
            .con 0x058  ;  ->16DD    [TONEB]
@@ -75,9 +75,9 @@ YN:        .con 0x130  ;  LDI S&X=09
 
 
 ;;; Copied from the ALPHA rom (function "ANUMDEL") with the use of Meindert Kuipers' M2KM program
-           .NAME "ANUMDEL"
-;ANUMDEL:   .con 0x379  ;  GSB41C      LB_BE49       AE49          ; GSUBNC 0FDE, address in same Quad
-ANUMDEL:   RXQ LB_BE49 
+           .NAME "ANUMREM"
+;ANUMREM:   .con 0x379  ;  GSB41C      LB_BE49       AE49          ; GSUBNC 0FDE, address in same Quad
+ANUMREM:   RXQ LB_BE49 
 ;           .con 0x03C  ;                            
 ;           .con 0x249  ;                            
            .con 0x20C  ;  ST=1?       2             
@@ -257,8 +257,8 @@ LB_BE64:   .con 0x04E  ;  C=0         ALL
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
-           .NAME "ADELR"  ;  "ABSP"
-ADELR:     .con 0x31C  ;  PT=         1             
+           .NAME "ABACK"  ;  "ABSP"
+ABACK:     .con 0x31C  ;  PT=         1             
            .con 0x238  ;  C=REGN      ( 8)P         
            .con 0x0EA  ;  BCEX        R<-           
            .con 0x17C  ;  RCR         6             
@@ -465,7 +465,7 @@ LB_A196:   .con 0x130  ;  LDI         210
            .con 0x050  ;  LC          1             
 LB_A19E:   .con 0x268  ;  REGN=C      ( 9)Q         
 ;LB_A19F:   .con 0x369  ;  GOL41C      LB_A128       A128          ;  GSUBNC 0FDA, address in same Quad
-LB_A19F:   RXQ LB_A128
+LB_A19F:   RGO LB_A128
 ;           .con 0x03C  ;                            
 ;           .con 0x128  ;                            
 LB_A1A2:   .con 0x39C  ;  PT=         0             
@@ -784,7 +784,7 @@ LB_A2AA:   .con 0x04E  ;  C=0         ALL
            .con 0x009  ;  GSUBNC      8302          
            .con 0x20C  ;                            
 ;LB_A2B6:   .con 0x369  ;  GOL41C      LB_A234       A234          ;  GSUBNC 0FDA, address in same Quad
-LB_A2B6:   RXQ LB_A234
+LB_A2B6:   RGO LB_A234
 ;           .con 0x03C  ;                            
 ;           .con 0x234  ;                            
 LB_A2B9:   .con 0x238  ;  C=REGN      ( 8)P         
@@ -1088,9 +1088,9 @@ LB_A3BD:   .con 0x04E  ;  C=0         ALL
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
-           .NAME "MENU"  ; PMTK
-;MENU:      .con 0x3B5  ;  GSB41C      LB_AF6C       AF6C          ;  GSUBNC 23ED, address in 4th Quad
-MENU:      RXQ LB_AF6C
+           .NAME "KEYMENU"  ; PMTK
+;KEYMENU:      .con 0x3B5  ;  GSB41C      LB_AF6C       AF6C          ;  GSUBNC 23ED, address in 4th Quad
+KEYMENU:   RXQ LB_AF6C
 ;           .con 0x08C  ;                            
 ;           .con 0x36C  ;                            
            .con 0x130  ;  LDI         020           
@@ -1102,7 +1102,7 @@ LB_AB4D:   .con 0x178  ;  C=REGN      ( 5)M
 ;           .con 0x02F  ;  GOC  +05    LB_AB55       AB55
            goc LB_AB55
 ;           .con 0x349  ;  GSB41C      ABSP          A0EA          ;  GSUBNC 23D2, address in 1st Quad
-           RXQ ADELR
+           RXQ ABACK
 ;           .con 0x08C  ;                            
 ;           .con 0x0EA  ;                            
 ;           .con 0x3CB  ;  GONC -07    LB_AB4D       AB4D
@@ -1111,7 +1111,7 @@ LB_AB55:   .con 0x2E6  ;  ?C#0        S&X
 ;           .con 0x027  ;  GOC  +04    LB_AB5A       AB5A
            goc LB_AB5A
 ;           .con 0x369  ;  GOL41C      -CCD_OS/X     ABEE          ;  GSUBNC 0FDA, address in same Quad
-           RXQ HEAD
+           RGO HEAD
 ;           .con 0x03C  ;                            
 ;           .con 0x3EE  ;                            
 LB_AB5A:   .con 0x104  ;  ST=0        8             
@@ -1235,8 +1235,8 @@ LB_ABBB:   .con 0x31C  ;  PT=         1
            goc LB_ABAE
 ;           .con 0x273  ;  GONC -32    LB_AB93       AB93
            gonc LB_AB93
-;LB_ABC6:   .con 0x3B5  ;  GSB41C      CLASPC          AF8F          ;  GSUBNC 23ED, address in 4th Quad
-LB_ABC6:   RXQ CLASPC
+;LB_ABC6:   .con 0x3B5  ;  GSB41C      CLASP          AF8F          ;  GSUBNC 23ED, address in 4th Quad
+LB_ABC6:   RXQ CLASP
 ;           .con 0x08C  ;                            
 ;           .con 0x38F  ;                            
            .con 0x3BA  ;  BSR         M             
@@ -1340,8 +1340,8 @@ LB_AC18:   .con 0x0EE  ;  BCEX        ALL
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
-           .NAME "APROMPT"
-APROMPT:   .con 0x378  ;  C=REGN      (13)c         
+           .NAME "APRMT"
+APRMT:     .con 0x378  ;  C=REGN      (13)c         
            .con 0x27C  ;  RCR         9             
            .con 0x3D8  ;  CSTEX                     
            .con 0x30C  ;  ST=1?       1             
@@ -1579,7 +1579,7 @@ LB_ACF0:   .con 0x1BC  ;  RCR         11
            .con 0x306  ;  ?A<C        S&X           
            .con 0x360  ;  RTNC                      
 ;LB_ACF8:   .con 0x369  ;  GOL41C      LB_AC94       AC94          ;  GSUBNC 0FDA, address in same Quad
-LB_ACF8:   RXQ LB_AC94
+LB_ACF8:   RGO LB_AC94
 ;           .con 0x03C  ;                            
 ;           .con 0x094  ;                            
 ;LB_ACFB:   .con 0x379  ;  GSB41C      LB_AC86       AC86          ;  GSUBNC 0FDE, address in same Quad
@@ -1630,7 +1630,7 @@ LB_AD12:   .con 0x3F2  ;  ASL         P-Q
 ;           .con 0x37B  ;  GONC -11    LB_AD12       AD12
            gonc LB_AD12
 ;           .con 0x369  ;  GOL41C      LB_AC94       AC94          ;  GSUBNC 0FDA, address in same Quad
-           RXQ LB_AC94
+           RGO LB_AC94
 ;           .con 0x03C  ;                            
 ;           .con 0x094  ;                            
 LB_AD27:   .con 0x012  ;  A=0         P-Q           
@@ -1887,8 +1887,8 @@ LB_ADED:   .con 0x266  ;  C=C-1       S&X
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
-           .NAME "ARCLXI"
-ARCLXI:    .con 0x0F8  ;  C=REGN      ( 3)X         
+           .NAME "ARCLINT"
+ARCLINT:   .con 0x0F8  ;  C=REGN      ( 3)X         
            .con 0x0EE  ;  BCEX        ALL           
            .con 0x0CE  ;  C=B         ALL           
            .con 0x27E  ;  C=C-1       MS            
@@ -1957,8 +1957,8 @@ LB_AF88:   .con 0x130  ;  LDI         03A
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
-           .NAME "CLASPC"
-CLASPC:    .con 0x130  ;  LDI         020           
+           .NAME "CLASP"
+CLASP:     .con 0x130  ;  LDI         020           
            .con 0x020  ;                            
 LB_AF91:   .con 0x31C  ;  PT=         1             
            .con 0x10A  ;  A=C         R<-           
@@ -1967,7 +1967,7 @@ LB_AF93:   .con 0x178  ;  C=REGN      ( 5)M
 ;           .con 0x037  ;  GOC  +06    LB_AF9B       AF9B
            goc LB_AF9B
 ;           .con 0x349  ;  GSB41C      ABSP          A0EA          ;  GSUBNC 23D2, address in 1st Quad
-           RXQ ADELR
+           RXQ ABACK
 ;           .con 0x08C  ;                            
 ;           .con 0x0EA  ;                            
 ;           .con 0x3D3  ;  GONC -06    LB_AF93       AF93
@@ -1983,7 +1983,7 @@ LB_AF9B:   .con 0x2EA  ;  ?C#0        R<-
            .con 0x36A  ;  ?A#C        R<-           
            .con 0x360  ;  RTNC                      
 ;LB_AFA3:   .con 0x349  ;  GSB41C      ABSP          A0EA          ;  GSUBNC 23D2, address in 1st Quad
-LB_AFA3:   RXQ ADELR
+LB_AFA3:   RXQ ABACK
 ;           .con 0x08C  ;                            
 ;           .con 0x0EA  ;                            
 ;           .con 0x3A3  ;  GONC -0C    LB_AF9A       AF9A
