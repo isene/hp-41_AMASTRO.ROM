@@ -54,7 +54,7 @@ Use the String in Alpha to create the prompt - leaving only what the user enters
 
 ### ANUMREM
 
-Taken from the ALPHA module. It gets the number in Alpha and deletes everything in lpha up to and including that number.
+Taken from the ALPHA module. It gets the number in Alpha and deletes everything in Alpha up to and including that number.
 
 ### ABACK
 
