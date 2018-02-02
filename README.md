@@ -1,5 +1,7 @@
 # hp-41_AMASTRO.ROM
 
+**NOTE** NOT READY FOR USE YET
+
 The amature astronomy rom for the HP-41 calculator - telescope and observational utilities.
 
 ## OBSRV
