@@ -26,7 +26,6 @@ Here are the menus:
 |                         |   L    | Load template from mass storage (via HP-IL)
 |                         |   S    | Save current observation list to mass storage (via HP-IL)
 |                         |   /    | End menu
-| ----------------------- | :----: | --------------
 | "EQUIP S:E:F:/"         |        | EQUIPMENT MENU
 |                         |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
 |                         |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
