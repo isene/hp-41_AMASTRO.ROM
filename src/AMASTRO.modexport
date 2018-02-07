@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XROM Title="AMASTRO.ROM">
+  <Key Label="*EP" Kind="RPN"/>
+  <Entry i="24" j="3"/>
+  <Key Label="*FLTER" Kind="RPN"/>
+  <Entry i="24" j="4"/>
+  <Key Label="*GAZE" Kind="RPN"/>
+  <Entry i="24" j="1"/>
+  <Key Label="*OBSRV" Kind="RPN"/>
+  <Entry i="24" j="5"/>
+  <Key Label="*SCOPE" Kind="RPN"/>
+  <Entry i="24" j="2"/>
   <Key Label="-AMASTRO 1A" Kind="MCODE"/>
   <Entry i="24" j="0"/>
   <Key Label="ABACK" Kind="MCODE"/>
-  <Entry i="24" j="7"/>
-  <Key Label="ANUMREM" Kind="MCODE"/>
-  <Entry i="24" j="6"/>
-  <Key Label="APRMT" Kind="MCODE"/>
   <Entry i="24" j="9"/>
-  <Key Label="ARCLINT" Kind="MCODE"/>
-  <Entry i="24" j="10"/>
-  <Key Label="CJC" Kind="RPN"/>
-  <Entry i="24" j="4"/>
-  <Key Label="CLASP" Kind="MCODE"/>
+  <Key Label="APRMT" Kind="MCODE"/>
   <Entry i="24" j="11"/>
+  <Key Label="ARCLINT" Kind="MCODE"/>
+  <Entry i="24" j="12"/>
+  <Key Label="CLASP" Kind="MCODE"/>
+  <Entry i="24" j="13"/>
   <Key Label="EPCALC" Kind="RPN"/>
-  <Entry i="24" j="3"/>
+  <Entry i="24" j="6"/>
+  <Key Label="JDT" Kind="RPN"/>
+  <Entry i="24" j="7"/>
   <Key Label="KEYMENU" Kind="MCODE"/>
-  <Entry i="24" j="8"/>
-  <Key Label="O-GO" Kind="RPN"/>
-  <Entry i="24" j="2"/>
-  <Key Label="OBSRV" Kind="RPN"/>
-  <Entry i="24" j="1"/>
+  <Entry i="24" j="10"/>
+  <Key Label="POPADR" Kind="MCODE"/>
+  <Entry i="24" j="14"/>
   <Key Label="YNTEST" Kind="MCODE"/>
-  <Entry i="24" j="5"/>
+  <Entry i="24" j="8"/>
 </XROM>
 

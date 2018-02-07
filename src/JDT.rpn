@@ -1,6 +1,6 @@
 .import 41cx
 
-001 LBL "CJC"
+001 LBL "JDT"
 002 40
 003 X>Y?
 004 GTO 01

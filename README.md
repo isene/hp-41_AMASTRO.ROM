@@ -4,23 +4,34 @@
 
 The amature astronomy rom for the HP-41 calculator - telescope and observational utilities.
 
-## OBSRV
+## *GAZE
 
-This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars, barlows and filters). You add observation objects/targets (Solar system object, Star, Double Star, Tripple Star, Variable star, Open cluster, Globular, Nebulae, Galaxy). You create your observation agenda/list for the night and then enter your notes for each object you observe. You can create templates as observation list.
+This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars/eyepieces, barlows and filters). You create your observation agenda/list for the night and then enter your notes for each object you observe. You can create templates as observation list.
 
-The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as menu system throughout the program. This makes it possible to choose among many different options such as when adding a new object where "+ S123VOGNX/" as the prompt means Add: Solar system, Star, 2xStar, 3xStar, Variable star, Open cluster, Globular, Nebulae, Galaxy, [up]. The first character(s) is the menu label while the characters after the space can be pressed for the various menu options.
+The program accommodates for two telescopes, five eyepieces, one Barlow and five filters.
 
-Here is the menus throughout the program:
+The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as menu system throughout the program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
 
-Menu	|Description
-----------------|-----------
-"OBS *O+EaTc/" | (OBS: Observe, Browse objects, Add objects, Browse equipment, add equipment, Template, clear Cur-file, [top level menu])
-"? S123VOGNX/" | (Browse: Solar system, Star, 2xStar, 3xStar, Variable star, Open cluster, Globular, Nebulae, Galaxy, [top level menu])
-"+ S123VOGNX/" | (Add: Solar system, Star, 2xStar, 3xStar, Variable star, Open cluster, Globular, Nebulae, Galaxy, [top level menu])
-"? SEBF/" | (Browse: Scope, Eyepiece, Barlow, Filter, [top level menu])
-"+ SEBF/" | (Add: Scope, Eyepiece, Barlow, Filter, [top level menu])
+Here are the menus throughout the program:
 
-The rest of the program should be fairly self explanatory when using it. Try it out, experiment :-)
+Menu	               | Symbol | Description   
+-----------------------|-----------------------
+"GAZE ^:O:s:-:Q:L:S:/" |        | TOP MENU
+                       |   ^    | start observing using current
+                       |   O    | create/edit Observation list
+					   |   -    | clear current observation list
+					   |   Q    | browse/change eQuipment
+					   |   L    | Load template from mass storage (via HP-IL)
+					   |   S    | Save current observation list to mass storage (via HP-IL)
+					   |   /    | End menu
+-----------------------|--------|---------------
+"EQUIP S:E:F:/"        |        | EQUIPMENT MENU
+                       |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
+                       |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
+                       |   F    | browse Filters
+					   |   /    | Go to top menu
+
+...more to be written
 
 ## Other utilities
 
@@ -54,10 +65,6 @@ This is the MCODE routine used to create menus throughout the OBSRV program. It 
 
 Use the String in Alpha to create the prompt - leaving only what the user enters in Alpha. In the CCD OS/X module this function is called PMTA.
 
-### ANUMREM
-
-Taken from the ALPHA module. It gets the number in Alpha and deletes everything in Alpha up to and including that number.
-
 ### ABACK
 
 Taken from the CCD OS/X module. It deletes the rightmost character in Alpha.
@@ -68,12 +75,16 @@ Deletes everything in Alpha after the first Space character (" "). From the CCD 
 
 ### YNTEST
 
-From the Paname module - stops program execution, waits for the user to press either "Y" or "N". Skips next line if "N" is pressed.
+From the Paname module - stops program execution, shows the content of Alpha, waits for the user to press either "Y" or "N". Skips next line if "N" is pressed.
 
 ### ARCLINT
 
 From the CCD OS/X where it is called ARCLI. It appends to Alpha the integer value of the number in X.
 
+### POPADR
+
+From the XROM module by Håkan Thörngren. Removes one return address from the return stack.
+
 ## Credits
 
-This ROM is created using Håkan Tørngren's brilliant NutStudio software. Thanks also goes to Ángel Martin for his help with extracting the YN? routine from the Paname module.
+This ROM is created using Håkan Tørngren's brilliant NutStudio software. Thanks also goes to Ángel Martin for his help with extracting the YNTEST routine from the Paname module. The obvious set of thanks goes to the original programmers of the MCODE routines and to Arne Helme for his EPCALC program.

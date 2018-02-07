@@ -3,9 +3,6 @@
 `FAT entry: YNTEST`:
                 .FAT  YNTEST
               
-`FAT entry: ANUMREM`:
-                .FAT  ANUMREM
-              
 `FAT entry: ABACK`:
                 .FAT  ABACK
               
@@ -21,14 +18,18 @@
 `FAT entry: CLASP`:
                 .FAT  CLASP
               
-                .PUBLIC `FAT entry: YNTEST`, `FAT entry: ANUMREM`, `FAT entry: ABACK`, `FAT entry: KEYMENU`, `FAT entry: APRMT`, `FAT entry: ARCLINT`, `FAT entry: CLASP`
+`FAT entry: POPADR`:
+                .FAT  POPADR
+              
+                .PUBLIC `FAT entry: YNTEST`, `FAT entry: ABACK`, `FAT entry: KEYMENU`, `FAT entry: APRMT`, `FAT entry: ARCLINT`, `FAT entry: CLASP`, `FAT entry: POPADR`
               
                 .SECTION Code
 
 
 ;;; Copied from the Paname rom (with the help of Ángel Martin), where the function is called Y/N?
            .NAME "YNTEST"
-YNTEST:    .con 0x130  ;  LDI S&X=09
+YNTEST:    gosub 0x10B2   ; AVIEW
+           .con 0x130  ;  LDI S&X=09
            .con 0x059  ;  CON:  short high pitch
            .con 0x375  ;  ?NC XQ      =09
            .con 0x058  ;  ->16DD    [TONEB]
@@ -72,188 +73,6 @@ YNTEST:    .con 0x130  ;  LDI S&X=09
            .con 0x05A  ;  ->162E    [SKP]
            .con 0x321  ;  ?NC GO      =09
            .con 0x046  ;  ->11C8    [OFF]
-
-
-;;; Copied from the ALPHA rom (function "ANUMDEL") with the use of Meindert Kuipers' M2KM program
-           .NAME "ANUMREM"
-;ANUMREM:   .con 0x379  ;  GSB41C      LB_BE49       AE49          ; GSUBNC 0FDE, address in same Quad
-ANUMREM:   RXQ LB_BE49 
-;           .con 0x03C  ;                            
-;           .con 0x249  ;                            
-           .con 0x20C  ;  ST=1?       2             
-           .con 0x360  ;  RTNC                      
-           .con 0x08A  ;  B=A         R<-           
-LB_BE7B:   .con 0x04E  ;  C=0         ALL           
-           .con 0x26E  ;  C=C-1       ALL           
-           .con 0x056  ;  C=0         XS            
-           .con 0x2DC  ;  PT=         13            
-           .con 0x290  ;  LC          A             
-           .con 0x268  ;  REGN=C      ( 9)Q         
-           .con 0x28D  ;  GSUBNC      STBT10        2EA3          ; HP41 SYSTEM ROM 2
-           .con 0x0B8  ;                            
-           .con 0x1BC  ;  RCR         11            
-           .con 0x008  ;  ST=1        3             
-           .con 0x398  ;  C=ST                      
-           .con 0x03C  ;  RCR         3             
-           .con 0x228  ;  REGN=C      ( 8)P         
-LB_BE88:   .con 0x244  ;  ST=0        9             
-           .con 0x01C  ;  PT=         3             
-           .con 0x06A  ;  ABEX        R<-           
-           .con 0x08A  ;  B=A         R<-           
-           .con 0x2ED  ;  GSUBNC      GTBYTA        29BB          ; HP41 SYSTEM ROM 2
-           .con 0x0A4  ;                            
-           .con 0x056  ;  C=0         XS            
-           .con 0x106  ;  A=C         S&X           
-           .con 0x130  ;  LDI         03A           
-           .con 0x03A  ;                            
-           .con 0x306  ;  ?A<C        S&X           
-;           .con 0x18B  ;  GONC +31    LB_BEC4       AEC4
-           gonc LB_BEC4
-           .con 0x130  ;  LDI         030           
-           .con 0x030  ;                            
-           .con 0x306  ;  ?A<C        S&X           
-;           .con 0x1BF  ;  GOC  +37    LB_BECE       AECE
-           goc LB_BECE
-           .con 0x130  ;  LDI         020           
-           .con 0x020  ;                            
-           .con 0x246  ;  C=A-C       S&X           
-LB_BE9B:   .con 0x39C  ;  PT=         0             
-           .con 0x058  ;  G=C                       
-           .con 0x0DD  ;  GSUBNC      DIGENT        0837          ; HP41 SYSTEM ROM 0
-           .con 0x020  ;                            
-LB_BE9F:   .con 0x01C  ;  PT=         3             
-           .con 0x06A  ;  ABEX        R<-           
-           .con 0x046  ;  C=0         S&X           
-           .con 0x08D  ;  GSUBNC      PTBYTA        2323          ; HP41 SYSTEM ROM 2
-           .con 0x08C  ;                            
-           .con 0x04E  ;  C=0         ALL           
-           .con 0x130  ;  LDI         005           
-           .con 0x005  ;                            
-           .con 0x36A  ;  ?A#C        R<-           
-;           .con 0x05B  ;  GONC +0B    LB_BEB3       AEB3
-           gonc LB_BEB3
-           .con 0x359  ;  GSUBNC      INCADA        29D6          ; HP41 SYSTEM ROM 2
-           .con 0x0A4  ;                            
-           .con 0x06A  ;  ABEX        R<-           
-           .con 0x24C  ;  ST=1?       9             
-;           .con 0x277  ;  GOC  -32    LB_BE7B       AE7B
-           goc LB_BE7B
-;           .con 0x2D3  ;  GONC -26    LB_BE88       AE88
-           gonc LB_BE88
-LB_BEAF:   .con 0x248  ;  ST=1        9             
-           .con 0x278  ;  C=REGN      ( 9)Q         
-           .con 0x23A  ;  C=C+1       M             
-;           .con 0x36F  ;  GOC  -13    LB_BE9F       AE9F
-           goc LB_BE9F
-LB_BEB3:   .con 0x278  ;  C=REGN      ( 9)Q         
-           .con 0x23A  ;  C=C+1       M             
-           .con 0x360  ;  RTNC                      
-           .con 0x3B8  ;  C=REGN      (14)d         
-           .con 0x13C  ;  RCR         8             
-           .con 0x3D8  ;  CSTEX                     
-           .con 0x308  ;  ST=1        1             
-           .con 0x3D8  ;  CSTEX                     
-           .con 0x17C  ;  RCR         6             
-           .con 0x3A8  ;  REGN=C      (14)d         
-           .con 0x18C  ;  ST=1?       11            
-           .con 0x3B5  ;  GSUBC       R^SUB         14ED          ; HP41 SYSTEM ROM 1
-           .con 0x051  ;                            
-           .con 0x179  ;  GSUBNC      NOREG9        095E          ; HP41 SYSTEM ROM 0
-           .con 0x024  ;                            
-           .con 0x3B9  ;  GOLNC       NFRPR         00EE          ; HP41 SYSTEM ROM 0
-           .con 0x002  ;                            
-LB_BEC4:   .con 0x130  ;  LDI         045           
-           .con 0x045  ;                            
-           .con 0x366  ;  ?A#C        S&X           
-;           .con 0x347  ;  GOC  -18    LB_BEAF       AEAF
-           goc LB_BEAF
-           .con 0x278  ;  C=REGN      ( 9)Q         
-           .con 0x23A  ;  C=C+1       M             
-;           .con 0x32F  ;  GOC  -1B    LB_BEAF       AEAF
-           goc LB_BEAF
-           .con 0x130  ;  LDI         01B           
-           .con 0x01B  ;                            
-;           .con 0x273  ;  GONC -32    LB_BE9B       AE9B
-           gonc LB_BE9B
-LB_BECE:   .con 0x130  ;  LDI         02B           
-           .con 0x02B  ;                            
-           .con 0x366  ;  ?A#C        S&X           
-;LB_BED1:   .con 0x273  ;  GONC -32    LB_BE9F       AE9F
-LB_BED1:   gonc LB_BE9F
-           .con 0x226  ;  C=C+1       S&X           
-           .con 0x366  ;  ?A#C        S&X           
-;           .con 0x037  ;  GOC  +06    LB_BEDA       AEDA
-           goc LB_BEDA
-           .con 0x08C  ;  ST=1?       5             
-;           .con 0x07F  ;  GOC  +0F    LB_BEE5       AEE5
-           goc LB_BEE5
-LB_BED7:   .con 0x130  ;  LDI         01A           
-           .con 0x01A  ;                            
-;LB_BED9:   .con 0x213  ;  GONC -3E    LB_BE9B       AE9B
-LB_BED9:   gonc LB_BE9B
-LB_BEDA:   .con 0x226  ;  C=C+1       S&X           
-           .con 0x366  ;  ?A#C        S&X           
-;           .con 0x027  ;  GOC  +04    LB_BEE0       AEE0
-           goc LB_BEE0
-           .con 0x130  ;  LDI         01C           
-           .con 0x01C  ;                            
-;           .con 0x3D3  ;  GONC -06    LB_BED9       AED9
-           gonc LB_BED9
-LB_BEE0:   .con 0x226  ;  C=C+1       S&X           
-           .con 0x366  ;  ?A#C        S&X           
-;           .con 0x26F  ;  GOC  -33    LB_BEAF       AEAF
-           goc LB_BEAF
-           .con 0x08C  ;  ST=1?       5             
-;           .con 0x39F  ;  GOC  -0D    LB_BED7       AED7
-           goc LB_BED7
-LB_BEE5:   .con 0x04C  ;  ST=1?       4             
-;           .con 0x24B  ;  GONC -37    LB_BEAF       AEAF
-           gonc LB_BEAF
-;           .con 0x353  ;  GONC -16    LB_BED1       AED1
-           gonc LB_BED1
-
-;;; Subroutines for ANUMDEL from the ALPHA ROM
-;LB_BE49:   .con 0x379  ;  GSB41C      LB_BE64       AE64          ; GSUBNC 0FDE, address in same Quad
-LB_BE49:   RXQ LB_BE64 
-;           .con 0x03C  ;                            
-;           .con 0x264  ;                            
-           .con 0x204  ;  ST=0        2             
-LB_BE4D:   .con 0x359  ;  GSUBNC      INCADA        29D6          ; HP41 SYSTEM ROM 2
-           .con 0x0A4  ;                            
-           .con 0x2ED  ;  GSUBNC      GTBYTA        29BB          ; HP41 SYSTEM ROM 2
-           .con 0x0A4  ;                            
-           .con 0x056  ;  C=0         XS            
-           .con 0x2E6  ;  ?C#0        S&X           
-;           .con 0x03F  ;  GOC  +07    LB_BE5A       AE5A
-           goc LB_BE5A
-           .con 0x130  ;  LDI         005           
-           .con 0x005  ;                            
-           .con 0x042  ;  C=0         @R            
-           .con 0x36A  ;  ?A#C        R<-           
-;           .con 0x3AF  ;  GOC  -0B    LB_BE4D       AE4D
-           goc LB_BE4D
-           .con 0x208  ;  ST=1        2             
-LB_BE5A:   .con 0x39C  ;  PT=         0             
-           .con 0x058  ;  G=C                       
-           .con 0x01C  ;  PT=         3             
-LB_BE5D:   .con 0x238  ;  C=REGN      ( 8)P         
-           .con 0x0FC  ;  RCR         10            
-           .con 0x0AA  ;  ACEX        R<-           
-           .con 0x10A  ;  A=C         R<-           
-           .con 0x07C  ;  RCR         4             
-           .con 0x228  ;  REGN=C      ( 8)P         
-           .con 0x3E0  ;  RTN                       
-LB_BE64:   .con 0x04E  ;  C=0         ALL           
-           .con 0x270  ;  DADD=C                    
-           .con 0x238  ;  C=REGN      ( 8)P         
-           .con 0x130  ;  LDI         008           
-           .con 0x008  ;                            
-           .con 0x01C  ;  PT=         3             
-           .con 0x190  ;  LC          6             
-           .con 0x01C  ;  PT=         3             
-           .con 0x10A  ;  A=C         R<-           
-;           .con 0x383  ;  GONC -10    LB_BE5D       AE5D
-           gonc LB_BE5D
 
 
 ;;; Copied from the CCD OS/X module with the use of Meindert Kuipers' M2KM program
@@ -1989,4 +1808,24 @@ LB_AFA3:   RXQ ABACK
 ;           .con 0x3A3  ;  GONC -0C    LB_AF9A       AF9A
            gonc LB_AF9A
 
+           .NAME "POPADR"
+POPADR:    .con 0x2F8  ;  C=REGN      (11)a         
+           .con 0x0EE  ;  BCEX        ALL           
+           .con 0x338  ;  C=REGN      (12)b         
+           .con 0x0AE  ;  ACEX        ALL           
+           .con 0x29C  ;  PT=         7             
+           .con 0x3EA  ;  ASL         R<-           
+           .con 0x3EA  ;  ASL         R<-           
+           .con 0x3EA  ;  ASL         R<-           
+           .con 0x3EA  ;  ASL         R<-           
+           .con 0x0AE  ;  ACEX        ALL           
+           .con 0x01C  ;  PT=         3             
+           .con 0x0CA  ;  C=B         R<-           
+           .con 0x07C  ;  RCR         4             
+           .con 0x328  ;  REGN=C      (12)b         
+           .con 0x0CE  ;  C=B         ALL           
+           .con 0x04A  ;  C=0         R<-           
+           .con 0x07C  ;  RCR         4             
+           .con 0x2E8  ;  REGN=C      (11)a         
+           .con 0x3E0  ;  RTN                       
 
