@@ -37,10 +37,10 @@ You can also use a set of labels as needed, except when the above two menus are 
 
 | Label | Description
 | :---: | ------------------------------------------
-|   A   | Set active scope (if you are on the scope listing, no index is needed - but otherwise enter the index [0 or 1] and press A)
-|   B   | Set active eyepiece (if you are on the eyepeice listing, no index is needed - but otherwise enter the index [0 to 4] and press B) 
+|   A   | Set active scope (during scope listing the scope viewed will become active. Otherwise enter the index [0 or 1] and press A)
+|   B   | Set active eyepiece (during eyepiece listing, the eyepiece viewed will become active. Otherwise enter the index [0 to 4] and press B) 
 |   C   | Set active Barlow lense (enter the Barlow's magnification and press C)
-|   D   | Set active filter (if you are on the filter listing, no index is needed - but otherwise enter the index [0 to 4] and press D) 
+|   D   | Set active filter (during filter listing, the filter viewed will become active. Otherwise enter the index [0 to 4] and press B) 
 |   E   | Go to TOP MENU
 |   a   | Set Filter 0 as active
 |   b   | Set Filter 1 as active
