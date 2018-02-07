@@ -14,21 +14,21 @@ The input function KEYMENU is taken from the CCD module (called PMTK there). It 
 
 Here are the menus throughout the program:
 
-Menu	               | Symbol | Description   
------------------------|-----------------------
-"GAZE ^:O:s:-:Q:L:S:/" |        | TOP MENU
-                       |   ^    | start observing using current
-                       |   O    | create/edit Observation list
-					   |   -    | clear current observation list
-					   |   Q    | browse/change eQuipment
-					   |   L    | Load template from mass storage (via HP-IL)
-					   |   S    | Save current observation list to mass storage (via HP-IL)
-					   |   /    | End menu
-"EQUIP S:E:F:/"        |        | EQUIPMENT MENU
-                       |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
-                       |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
-                       |   F    | browse Filters
-					   |   /    | Go to top menu
+Menu	                | Symbol | Description   
+----------------------- | :----: | --------------
+"GAZE ^:O:s:-:Q:L:S:/"  |        | TOP MENU
+                        |   ^    | start observing using current
+                        |   O    | create/edit Observation list
+					    |   -    | clear current observation list
+					    |   Q    | browse/change eQuipment
+					    |   L    | Load template from mass storage (via HP-IL)
+					    |   S    | Save current observation list to mass storage (via HP-IL)
+					    |   /    | End menu
+"EQUIP S:E:F:/"         |        | EQUIPMENT MENU
+                        |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
+                        |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
+                        |   F    | browse Filters
+					    |   /    | Go to top menu
 
 ...more to be written
 
