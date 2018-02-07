@@ -6,9 +6,12 @@ The amature astronomy rom for the HP-41 calculator - telescope and observational
 
 ## *GAZE
 
-This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars/eyepieces, barlows and filters). You create your observation agenda/list for the night and then enter your notes for each object you observe. You can create templates as observation list.
+This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars/eyepieces, barlows and filters). You create your observation agenda/list for the night and then enter your notes for each object as you observe. You can create templates as observation list and save/load them on mass storage via HP-IL.
 
 The program accommodates for two telescopes, five eyepieces, one Barlow and five filters.
+
+It does various calculations for your scopes and your eyepieces used with each scope. You will get anything from the usual focal ratios, magnifications, actual
+field of view and telescope limits to magnification recommendations for various objects, smallest detail seen on the Moon surface and much more.
 
 The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as menu system throughout the program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
 
@@ -29,6 +32,23 @@ Here are the menus throughout the program:
 |                         |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
 |                         |   F    | browse Filters
 |                         |   /    | Go to top menu
+
+You can also use a set of labels as needed, except when the above two menus are shown - as you can then only press the keys indicated in the menu (which is why you can press "/" on the top menu to exit it and allow for pressing the labels below).
+
+| Label | Description
+| :---: | ------------------------------------------
+|   A   | Set active scope (if you are on the scope listing, no index is needed - but otherwise enter the index [0 or 1] and press A)
+|   B   | Set active eyepiece (if you are on the eyepeice listing, no index is needed - but otherwise enter the index [0 to 4] and press B) 
+|   C   | Set active Barlow lense (enter the Barlow's magnification and press C)
+|   D   | Set active filter (if you are on the filter listing, no index is needed - but otherwise enter the index [0 to 4] and press D) 
+|   E   | Go to TOP MENU
+|   a   | Set Filter 0 as active
+|   b   | Set Filter 1 as active
+|   c   | Set Filter 2 as active
+|   d   | Set Filter 3 as active
+|   e   | Set Filter 4 as active
+
+At any time during the listing of Scopes, Eyepieces or Filter, you can enter a new value to correct an old value or provide a new value where there is no value (0.0). On any questions as to whether you want Scope Calculations, Eyepiece calculations, etc - you can press "N" for No, "Y" or "R/S" for Yes.
 
 ...more to be written
 
