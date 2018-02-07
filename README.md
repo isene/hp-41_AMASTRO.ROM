@@ -6,16 +6,15 @@ The amature astronomy rom for the HP-41 calculator - telescope and observational
 
 ## *GAZE
 
-This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars/eyepieces, barlows and filters). You create your observation agenda/list for the night and then enter your notes for each object as you observe. You can create templates as observation list and save/load them on mass storage via HP-IL.
+This is a full fledged observation logger for amateur astronomers. You add your observation equipment (telescopes, occulars/eyepieces, barlows and filters). You create your observation agenda/list for the night and then enter your notes for each object as you observe. You can create templates as observation list and use mass storage to save/load them via HP-IL.
 
-The program accommodates for two telescopes, five eyepieces, one Barlow and five filters.
+The program accommodates for two telescopes (index 0 or 1), five eyepieces (index 0 to 4), one Barlow and five filters (index 0 to 4).
 
-It does various calculations for your scopes and your eyepieces used with each scope. You will get anything from the usual focal ratios, magnifications, actual
-field of view and telescope limits to magnification recommendations for various objects, smallest detail seen on the Moon surface and much more.
+It does various calculations for your scopes, and your eyepieces used with each scope. You will get anything from the usual focal ratios, magnifications, actual field of view and telescope limits to magnification recommendations for various objects, smallest detail seen on the Moon surface and much more.
 
-The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as menu system throughout the program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
+The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as the main menu system in this program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
 
-Here are the menus throughout the program:
+Here are the menus:
 
 | Menu                    | Symbol | Description   
 | ----------------------- | :----: | --------------
@@ -27,6 +26,7 @@ Here are the menus throughout the program:
 |                         |   L    | Load template from mass storage (via HP-IL)
 |                         |   S    | Save current observation list to mass storage (via HP-IL)
 |                         |   /    | End menu
+| ----------------------- | :----: | --------------
 | "EQUIP S:E:F:/"         |        | EQUIPMENT MENU
 |                         |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
 |                         |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
