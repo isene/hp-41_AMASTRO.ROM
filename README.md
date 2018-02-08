@@ -77,7 +77,7 @@ Simple.
 
 ## MCODE routines
 
-Several MCODE routines used by the RPN programs are included. They are taken from the CCD OS/X, APLHA and PANAME modules. The names of these functions have been changed from the original to avoid conflicts in case you have any of these original modules installed as well.
+Several MCODE routines used by the RPN programs are included. They are taken from the CCD OS/X, APLHA and PANAME modules. The names of these functions have been changed from the original to avoid conflicts in case you have any of these original modules installed as well. Some of these functions are not used by the FOCAL programs, but they are used as subroutines for the needed MCODE functions - and thus they become freebies :-)
 
 ### KEYMENU
 
