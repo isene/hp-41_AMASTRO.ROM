@@ -16,21 +16,23 @@ The input function KEYMENU is taken from the CCD module (called PMTK there). It 
 
 Here are the menus:
 
-| Menu                    | Symbol | Description   
-| ----------------------- | :----: | --------------
-| "GAZE ^:O:s:-:Q:L:S:/"  |        | TOP MENU
-|                         |   ^    | start observing using current
-|                         |   O    | create/edit Observation list
-|                         |   -    | clear current observation list
-|                         |   Q    | browse/change eQuipment
-|                         |   L    | Load template from mass storage (via HP-IL)
-|                         |   S    | Save current observation list to mass storage (via HP-IL)
-|                         |   /    | End menu
-| "EQUIP S:E:F:/"         |        | EQUIPMENT MENU
-|                         |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
-|                         |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
-|                         |   F    | browse Filters
-|                         |   /    | Go to top menu
+| Menu                      | Symbol | Description   
+| ------------------------- | :----: | --------------
+| **GAZE ^:O:s:-:Q:L:S:/**  |        | TOP MENU
+|                           |   ^    | start observing using current observation list
+|                           |   O    | create/edit Observation list
+|                           |   -    | clear current observation list
+|                           |   Q    | browse/change eQuipment
+|                           |   L    | Load template from mass storage (via HP-IL)
+|                           |   S    | Save current observation list to mass storage (via HP-IL)
+|                           |   /    | End menu
+| **EQUIP S:E:F:/**         |        | EQUIPMENT MENU
+|                           |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
+|                           |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
+|                           |   F    | browse Filters
+|                           |   /    | Go to top menu
+
+When you create your observation list (the program relies on the HP-41CX ED command to edit the file), the allocated file size will now and then be insufficient. When it does, simply press "ON" to exit the EDitor and the program will automatically enlarge the file and let you continue to edit it.
 
 You can also use a set of labels as needed, except when the above two menus are shown - as you can then only press the keys indicated in the menu (which is why you can press "/" on the top menu to exit it and allow for pressing the labels below).
 
