@@ -19,18 +19,18 @@ Here are the menus:
 | Menu                      | Symbol | Description   
 | ------------------------- | :----: | --------------
 | **GAZE ^:O:s:-:Q:L:S:/**  |        | TOP MENU
-|                           |   ^    | start observing using current observation list
-|                           |   O    | create/edit Observation list
-|                           |   -    | clear current observation list
-|                           |   Q    | browse/change eQuipment
-|                           |   L    | Load template from mass storage (via HP-IL)
-|                           |   S    | Save current observation list to mass storage (via HP-IL)
-|                           |   /    | End menu
+|                           | **^**  | start observing using current observation list
+|                           | **O**  | create/edit Observation list
+|                           | **-**  | clear current observation list
+|                           | **Q**  | browse/change eQuipment
+|                           | **L**  | Load template from mass storage (via HP-IL)
+|                           | **S**  | Save current observation list to mass storage (via HP-IL)
+|                           | **/**  | End menu
 | **EQUIP S:E:F:/**         |        | EQUIPMENT MENU
-|                           |   S    | browse Scopes (continues to eyepieces after scopes have been shown)
-|                           |   E    | browse Eyepieces (continues to filters after eyepieces are shown)
-|                           |   F    | browse Filters
-|                           |   /    | Go to top menu
+|                           | **S**  | browse Scopes (continues to eyepieces after scopes have been shown)
+|                           | **E**  | browse Eyepieces (continues to filters after eyepieces are shown)
+|                           | **F**  | browse Filters
+|                           | **/**  | Go to top menu
 
 When you create your observation list (the program relies on the HP-41CX ED command to edit the file), the allocated file size will now and then be insufficient. When it does, simply press "ON" to exit the EDitor and the program will automatically enlarge the file and let you continue to edit it.
 
@@ -38,16 +38,16 @@ You can also use a set of labels as needed, except when the above two menus are 
 
 | Label | Description
 | :---: | ------------------------------------------
-|   A   | Set active scope. During scope listing the scope viewed will become active. Otherwise enter the index [0 or 1] and press A
-|   B   | Set active eyepiece. During eyepiece listing, the eyepiece viewed will become active. Otherwise enter the index [0 to 4] and press B 
-|   C   | Set active Barlow lense. Enter the Barlow's magnification and press C
-|   D   | Set active filter. During filter listing, the filter viewed will become active. Otherwise enter the index [0 to 4] and press D
-|   E   | Go to TOP MENU
-|   a   | Set Filter 0 as active
-|   b   | Set Filter 1 as active
-|   c   | Set Filter 2 as active
-|   d   | Set Filter 3 as active
-|   e   | Set Filter 4 as active
+| **A** | Set active scope. During scope listing the scope viewed will become active. Otherwise enter the index [0 or 1] and press A
+| **B** | Set active eyepiece. During eyepiece listing, the eyepiece viewed will become active. Otherwise enter the index [0 to 4] and press B 
+| **C** | Set active Barlow lense. Enter the Barlow's magnification and press C
+| **D** | Set active filter. During filter listing, the filter viewed will become active. Otherwise enter the index [0 to 4] and press D
+| **E** | Go to TOP MENU
+| **a** | Set Filter 0 as active
+| **b** | Set Filter 1 as active
+| **c** | Set Filter 2 as active
+| **d** | Set Filter 3 as active
+| **e** | Set Filter 4 as active
 
 At any time during the listing of Scopes, Eyepieces or Filter, you can enter a new value to correct an old value or provide a new value where there is no value (0.0). On any questions as to whether you want Scope Calculations, Eyepiece calculations, etc - you can press "N" for No, "Y" or "R/S" for Yes.
 
