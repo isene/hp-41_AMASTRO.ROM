@@ -103,9 +103,9 @@ From the Paname module - stops program execution, shows the content of Alpha, wa
 
 From the CCD OS/X where it is called ARCLI. It appends to Alpha the integer value of the number in X.
 
-### POPADR
+### RETPFL
 
-From the XROM module by Håkan Thörngren. Removes one return address from the return stack.
+From the NOVCHAP module. "Retypes" a file. Used here to take a data file aand converting it into an ascii text file in order to save it to mass storage via HP-IL. See the NOVCHAP manual for details of use.
 
 ## Credits
 
