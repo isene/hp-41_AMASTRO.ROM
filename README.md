@@ -65,11 +65,11 @@ An eyepiece calculator written by Arne Helme...
 
 The easiest Julian Date converter ever.
 
-To convert a date/time to Julian; Simply enter the time (optional) and date and do XEQ'CJC and you will get the Julian Date back as a result. Press R/S and you will get the Julian Time of the Julian Date. Press R/S again and you will get the Julian Date plus the Julian Time (the total). Another R/S will give you the J2000 - i.e. the Julian Date since 2000-01-01.
+To convert a date/time to Julian; Simply enter the time (optional) and date and do XEQ"JDT" and you will get the Julian Date back as a result. Press R/S and you will get the Julian Time of the Julian Date. Press R/S again and you will get the Julian Date plus the Julian Time (the total). Another R/S will give you the J2000 - i.e. the Julian Date since 2000-01-01. If Flag 05 is set, the program will simply return the full Julian Date without any intermediate stops.
 
-To convert a Julian Date to calendar date; Simply enter the Julian Date (with decimals if you want to cater for the time of the date as well) and do XEQ'CJC and you will get the calendar date in X and the time of day in Y.
+To convert a Julian Date to calendar date; Simply enter the Julian Date (with decimals if you want to cater for the time of the date as well) and do XEQ"JDT" and you will get the calendar date in X and the time of day in Y.
 
-The CJC program converts back and forth and back and forth and back and...
+The JDT program converts back and forth and back and forth and back and...
 
 The program recognizes the input to discern if it is a Julian Date number or a Calendar Date number.
 

@@ -2,13 +2,13 @@
 <XROM Title="AMASTRO.ROM">
   <Key Label="*EP" Kind="RPN"/>
   <Entry i="24" j="3"/>
-  <Key Label="*FLTER" Kind="RPN"/>
+  <Key Label="*FL" Kind="RPN"/>
   <Entry i="24" j="4"/>
   <Key Label="*GAZE" Kind="RPN"/>
   <Entry i="24" j="1"/>
   <Key Label="*OBSRV" Kind="RPN"/>
   <Entry i="24" j="5"/>
-  <Key Label="*SCOPE" Kind="RPN"/>
+  <Key Label="*SC" Kind="RPN"/>
   <Entry i="24" j="2"/>
   <Key Label="-AMASTRO 1A" Kind="MCODE"/>
   <Entry i="24" j="0"/>
