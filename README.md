@@ -57,9 +57,13 @@ On any questions as to whether you want Scope Calculations, Eyepiece calculation
 
 ## Other utilities
 
-### EPCALC
+### MOON
 
-An eyepiece calculator written by Arne Helme...
+The phase of the moon affects your observational capabilities.
+
+Calculates the percentage of illumination of the moon and whether the phase is waxing (increasing) or waning (decreasing). It also shows the next new and full moons.
+
+XEQ "MOON" takes the current date and time and returns the percentage of illumination (a positive number means the phase is waxing, while a negative number shows the phase is waning). Register Y contains the number of days (and fraction of days) to the next full moon while Alpha shows that number in days, hours, minutes.
 
 ### JDT (Julian DaTe)
 
