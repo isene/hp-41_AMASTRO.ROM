@@ -57,6 +57,10 @@ On any questions as to whether you want Scope Calculations, Eyepiece calculation
 
 ## Other utilities
 
+### SAVE*
+
+Saves the Observation record along with the Equipment used to mass storage via HP-IL. On the PC side, running "HP-41_amastro.rb" will create a neat observations text file named "AMASTRO-(JulianDate).txt".
+
 ### MOON
 
 The phase of the moon affects your observational capabilities.
@@ -78,6 +82,11 @@ The JDT program converts back and forth and back and forth and back and...
 The program recognizes the input to discern if it is a Julian Date number or a Calendar Date number.
 
 Simple.
+
+### TZ
+
+Asks for and saves your Time Zone in a one-record data file. The programs "*GAZE" and "JDT" will run this program unless it finds a data file named "*TZ" with that one Time Zone number in it.
+
 
 ## Supporting MCODE routines
 
