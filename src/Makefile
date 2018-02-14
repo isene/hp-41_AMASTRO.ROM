@@ -1,4 +1,4 @@
-RPN_SRCS = STARGAZE.rpn SAVESTAR.rpn MOON.rpn JDT.rpn TZ.rpn
+RPN_SRCS = STARGAZE.rpn MOON.rpn JDT.rpn SAVESTAR.rpn
 RPN_RAWS =
 ASM_SRCS = header.s AMASTRO.s
 

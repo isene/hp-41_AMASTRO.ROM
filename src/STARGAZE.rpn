@@ -1,6 +1,6 @@
 .import 41cx
 .import hpil
-.local ARCLINT, APRMT, KEYMENU, YNTEST, ABACK
+.local ARCLINT, APRMT, KEYMENU, YNTEST
 
 ; Basic description of the "*GAZE" program
 ;=========================================
@@ -572,7 +572,7 @@
 496 STO 01 
 497 GTO 12
 498 LBL C
-499 "BRLW MAG?"
+499 "BRLW-X?"
 500 PROMPT
 501 STO 04
 502 GTO 98 
@@ -682,7 +682,7 @@
 606 RTN
 607 GTO E 
 608 LBL 67 
-609 "EP<MM>="
+609 "EP="
 610 1/X
 611 RCL 39
 612 *
