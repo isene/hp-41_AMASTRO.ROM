@@ -59,7 +59,7 @@ On any questions as to whether you want Scope Calculations, Eyepiece calculation
 
 ### EPCALC
 
-A neat EyePiece calculator courtesy of Arne Helme. Upon XEQ"EPCALC", you will be presented with a menu corresponding to the top row keys A-E; FV,VA,EFL,TFL,TA
+A neat EyePiece calculator courtesy of Arne Helme. Upon XEQ"EPCALC", you will be presented with a menu corresponding to the top row keys A-E: **FV,VA,EFL,TFL,TA**
 
 |  Menu  |  Lbl  | Description
 | :----: | :---: | -----------------------------------------
