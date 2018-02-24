@@ -10,6 +10,15 @@ The program accommodates for two telescopes (index 0 or 1), five eyepieces (inde
 
 It does various calculations for your scopes, and your eyepieces used with each scope. You will get anything from the usual focal ratios, magnifications, actual field of view and telescope limits to magnification recommendations for various objects, smallest detail seen on the Moon surface and much more.
 
+The program generates a few eXtended Memory files:
+
+| File  | Type  | Description   
+| ----- | :---: | --------------
+| SC    | DATA  | Scopes 0 and 1 (Name, AP and FL for each)
+| EP    | DATA  | EPs 0 to 4 (Name, DIA, FL and AFOV for each)
+| FL    | DATA  | Filters 0 to 4 (Only 5 records with Filter names)
+| OBSRV | ASCII | Your list of observation targets for the night - with added equipment and notes as you start observing 
+
 The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as the main menu system in this program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
 
 Here are the menus:
@@ -31,6 +40,8 @@ Here are the menus:
 |                        | **/**  | Go to top menu
 
 When you create your observation list (the program relies on the HP-41CX ED command to edit the file), the allocated file size will now and then be insufficient. When it does, simply press "ON" to exit the EDitor and the program will automatically enlarge the file and let you continue to edit it.
+
+When you start your observation (the ENTER key in the Main Menu), the current Julian Date will be entered as the first record in the OBSRV file. Then you will be presented with each item in your observation list with the currently selected scope (0 or 1), eyepiece (A-E), any selected Barlow magification and filter (A-E) added. Example: You have entered "VEN" in your observation list. You have selected Scope #0 and Eyepiece #3 as well as Barlow Magnification of 3X and Filter #2. When observing, the following will be seen in the prompt: "VEN:0D3C:" (Scope 0, EP D, Barlow 3X, Filter C). You then write your note, up to 24 characters and press R/S. Your note will be appended to that record.
 
 You can also use a set of labels as needed, except when the above two menus are shown - as you can then only press the keys indicated in the menu (which is why you can press "/" on the top menu to exit it and allow for pressing the labels below).
 
