@@ -57,6 +57,20 @@ On any questions as to whether you want Scope Calculations, Eyepiece calculation
 
 ## Other utilities
 
+### EPCALC
+
+A neat EyePiece calculator courtesy of Arne Helme. Upon XEQ"EPCALC", you will be presented with a menu corresponding to the top row keys A-E; FV,VA,EFL,TFL,TA
+
+|  Menu  |  Lbl  | Description
+| :----: | :---: | -----------------------------------------
+| **FV** | **A** | Field of View (true field)
+| **VA** | **B** | View Apparent (Apparent Field Of View; AFOV)
+| **EFL**| **C** | Eyepiece Focal Length (in millimeters)
+| **TFL**| **D** | Telescope Focal Length (in millimeters)
+| **TA** | **E** | Telescope Aperature (in millimeters)
+
+The program functions as a solver. Enter a value for four of the variables. Press the corresponding key for the fifth value to see the resulting value for that variable. Pressing R/S after viewing the TA variable (the E key) will show you some basic values for your setup; Focal ratio, magnification and Dawes resolution limit. The main program will show you more results, but the EPCALC is a quick and neat calculator for any Telescope/Eyepiece combo.
+
 ### SAVE*
 
 Saves the Observation record along with the Equipment used to mass storage via HP-IL. On the PC side, running "HP-41_amastro.rb" will create a neat observations text file named "AMASTRO-(JulianDate).txt".
