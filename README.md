@@ -12,12 +12,12 @@ It does various calculations for your scopes, and your eyepieces used with each 
 
 The program generates a few eXtended Memory files:
 
-| File  | Type  | Description   
-| ----- | :---: | --------------
-| SC    | DATA  | Scopes 0 and 1 (Name, AP and FL for each)
-| EP    | DATA  | EPs 0 to 4 (Name, DIA, FL and AFOV for each)
-| FL    | DATA  | Filters 0 to 4 (Only 5 records with Filter names)
-| OBSRV | ASCII | Your list of observation targets for the night - with added equipment and notes as you start observing 
+| File    | Type  | Description   
+| :-----: | :---: | --------------
+| *SC*    | DATA  | Scopes 0 and 1 (Name, AP and FL for each)
+| *EP*    | DATA  | EPs 0 to 4 (Name, DIA, FL and AFOV for each)
+| *FL*    | DATA  | Filters 0 to 4 (Only 5 records with Filter names)
+| *OBSRV* | ASCII | Your list of observation targets for the night - with added equipment and notes as you start observing 
 
 The input function KEYMENU is taken from the CCD module (called PMTK there). It is used as the main menu system in this program. This makes it possible to choose among many different options like in the TOP MENU (see below). The first characters is the menu label while the characters after the space (separated by colons) can be pressed for the various menu options.
 
