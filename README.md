@@ -1,8 +1,6 @@
 # hp-41_AMASTRO.ROM
 
-**NOTE** NOT READY FOR USE YET
-
-The amature astronomy rom for the HP-41 calculator - telescope and observational utilities.
+The amature astronomy rom for the HP-41 calculator: Telescope and observational utilities.
 
 ## *GAZE
 
@@ -52,8 +50,6 @@ You can also use a set of labels as needed, except when the above two menus are 
 At any time during the listing of Scopes, Eyepieces or Filter, you can enter a new value to correct an old value or provide a new value where there is no value (0.0). 
 
 On any questions as to whether you want Scope Calculations, Eyepiece calculations, etc - you can press "N" for No, "Y" or "R/S" for Yes.
-
-...more to be written
 
 ## Other utilities
 
