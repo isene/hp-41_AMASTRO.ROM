@@ -130,10 +130,6 @@ From the Paname module - stops program execution, shows the content of Alpha, wa
 
 From the CCD OS/X where it is called ARCLI. It appends to Alpha the integer value of the number in X.
 
-### RETPFL
-
-From the NOVCHAP module. "Retypes" a file. Used here to take a data file aand converting it into an ascii text file in order to save it to mass storage via HP-IL. See the NOVCHAP manual for details of use.
-
 ## Credits
 
 This ROM is created using Håkan Tørngren's brilliant NutStudio software. Thanks also goes to Ángel Martin for his help with extracting the YNTEST routine from the Paname module. The obvious set of thanks goes to the original programmers of the MCODE routines and to Arne Helme for his EPCALC program.
