@@ -7,13 +7,13 @@
   <Key Label="-AMASTRO 1A" Kind="MCODE"/>
   <Entry i="24" j="0"/>
   <Key Label="ABACK" Kind="MCODE"/>
-  <Entry i="24" j="12"/>
+  <Entry i="24" j="13"/>
   <Key Label="APRMT" Kind="MCODE"/>
-  <Entry i="24" j="14"/>
-  <Key Label="ARCLINT" Kind="MCODE"/>
   <Entry i="24" j="15"/>
-  <Key Label="CLASP" Kind="MCODE"/>
+  <Key Label="ARCLINT" Kind="MCODE"/>
   <Entry i="24" j="16"/>
+  <Key Label="CLASP" Kind="MCODE"/>
+  <Entry i="24" j="17"/>
   <Key Label="EP" Kind="RPN"/>
   <Entry i="24" j="4"/>
   <Key Label="EPCALC" Kind="RPN"/>
@@ -23,16 +23,18 @@
   <Key Label="JDT" Kind="RPN"/>
   <Entry i="24" j="8"/>
   <Key Label="KEYMENU" Kind="MCODE"/>
-  <Entry i="24" j="13"/>
+  <Entry i="24" j="14"/>
+  <Key Label="MAG" Kind="RPN"/>
+  <Entry i="24" j="9"/>
   <Key Label="MOON" Kind="RPN"/>
   <Entry i="24" j="7"/>
   <Key Label="SAVE*" Kind="RPN"/>
-  <Entry i="24" j="10"/>
+  <Entry i="24" j="11"/>
   <Key Label="SC" Kind="RPN"/>
   <Entry i="24" j="3"/>
   <Key Label="TZ" Kind="RPN"/>
-  <Entry i="24" j="9"/>
+  <Entry i="24" j="10"/>
   <Key Label="YNTEST" Kind="MCODE"/>
-  <Entry i="24" j="11"/>
+  <Entry i="24" j="12"/>
 </XROM>
 

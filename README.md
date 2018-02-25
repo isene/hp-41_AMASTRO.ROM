@@ -104,6 +104,12 @@ The program recognizes the input to discern if it is a Julian Date number or a C
 
 Simple.
 
+### MAG
+
+Shows the luminosity difference between two objects of specific magnitudes. 
+
+Enter one object's magnitude, ENTER and the other object's magnitude and do XEQ"MAG". The brightness difference is shown in X (how many times more bright the brightest object is than the other).
+
 ### TZ
 
 Asks for and saves your Time Zone in a one-record data file. The programs "*GAZE" and "JDT" will run this program unless it finds a data file named "*TZ" with that one Time Zone number in it.
