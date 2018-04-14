@@ -146,3 +146,7 @@ From the CCD OS/X where it is called ARCLI. It appends to Alpha the integer valu
 ## Credits
 
 This ROM is created using Håkan Tørngren's brilliant NutStudio software. Thanks also goes to Ángel Martin for his help with extracting the YNTEST routine from the Paname module. The obvious set of thanks goes to the original programmers of the MCODE routines and to Arne Helme for his EPCALC program.
+
+## License
+This software is released into the Public Domain.
+
