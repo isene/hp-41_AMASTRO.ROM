@@ -1,6 +1,6 @@
 # hp-41_AMASTRO.ROM
 
-The amateur astronomy rom for the HP-41 calculator: Telescope and observational utilities. 
+The amateur astronomy rom for the HP-41 calculator: Telescope and observational utilities.
 
 ## *GAZE
 

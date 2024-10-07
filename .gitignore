@@ -1,0 +1,6 @@
+*.swp
+*.o
+*.lst
+src/AMASTRO.mod
+src/AMASTRO.rom
+src/AMASTRO
