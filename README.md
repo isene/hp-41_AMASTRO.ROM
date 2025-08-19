@@ -7,6 +7,7 @@
 [![Stay Amazing](https://img.shields.io/badge/Stay-Amazing-blue.svg)](https://isene.org)
 
 <img src="img/amastro_logo.svg" align="left" width="150" height="150" alt="AMASTRO ROM Logo">
+<br clear="left"/>
 
 The amateur astronomy rom for the HP-41 calculator: Telescope and observational utilities.
 
