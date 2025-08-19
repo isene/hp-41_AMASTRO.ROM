@@ -2,6 +2,7 @@
 
 [![HP-41](https://img.shields.io/badge/HP--41-Calculator-orange)](https://en.wikipedia.org/wiki/HP-41C)
 [![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assembly&logoColor=white)](https://en.wikipedia.org/wiki/Assembly_language)
+[![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat&logo=ruby&logoColor=white)](https://www.ruby-lang.org/)
 [![License](https://img.shields.io/badge/License-Public%20Domain-brightgreen.svg)](https://unlicense.org/)
 [![GitHub stars](https://img.shields.io/github/stars/isene/hp-41_AMASTRO.ROM.svg)](https://github.com/isene/hp-41_AMASTRO.ROM/stargazers)
 [![Stay Amazing](https://img.shields.io/badge/Stay-Amazing-blue.svg)](https://isene.org)
